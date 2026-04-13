@@ -1,0 +1,53 @@
+---
+title: "filtrage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{filtrage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+Ce tutoriel montre comment filtrer les données de comptage vélo et créer un graphique.
+
+## Charger les données
+
+```{r setup}
+library(firstlib.patpat)
+data("df_velo")
+```
+
+## Filtrer une boucle spécifique
+
+Pour filtrer les données de la boucle 880 :
+
+```{r filtrage}
+boucle_880 <- filtrer_trajet(df_velo, boucle = "880")
+head(boucle_880)
+```
+
+## Créer un graphique de distribution
+
+Pour visualiser la distribution hebdomadaire des trajets :
+
+```{r graphique, fig.width=7, fig.height=4}
+plot_distribution_semaine(boucle_880)
+```
+
+## Statistiques sur les trajets
+
+Nombre total de trajets sur cette boucle :
+
+```{r stats}
+compter_nombre_trajets(boucle_880)
+```
+
+

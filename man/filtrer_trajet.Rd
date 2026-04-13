@@ -4,7 +4,7 @@
 \alias{filtrer_trajet}
 \title{Filtrer les trajets par numéro de boucle}
 \usage{
-filtrer_trajet(df_velo, boucle)
+filtrer_trajet(df_velo, boucle = NULL)
 }
 \arguments{
 \item{boucle}{Vecteur de numéros de boucle à sélectionner}
