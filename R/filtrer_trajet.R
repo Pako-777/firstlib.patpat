@@ -9,8 +9,8 @@
 #'
 #' @examples
 #' # filtrer_trajet(df_velo, c("880", "881"))
-filtrer_trajet <- function(trajet, boucle){
+filtrer_trajet <- function(df_velo, boucle){
   boucle_num <- as.numeric(boucle)
-  trajet |>
-    filter(.data[["Numéro de boucle"]] %in% boucle_num)
+  df_velo |>
+    filter(`Numéro de boucle` %in% (boucle_num))
 }
