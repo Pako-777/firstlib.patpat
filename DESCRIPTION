@@ -15,8 +15,10 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    rlang
+    dplyr,
+    rlang,
+    forcats,
+    ggplot2
 Depends: 
     R (>= 3.5)
 LazyData: true
-VignetteBuilder: knitr
