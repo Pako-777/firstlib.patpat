@@ -17,8 +17,6 @@ filtre_anomalie <- function(trajet){
 
 
 
-
-
 #' Compter le nombre total de trajets
 #'
 #' @param trajet Data frame contenant les données de trajets avec une colonne Total
